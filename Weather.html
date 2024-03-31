@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./Weather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Heading -->
+        <h1>WEATHER APP</h1>
+
+        <!-- Tab Container -->
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <!-- Main Container - > Grand Access UI , Your Weather , Search Weather and  -->
+
+        <div class="weather-container">
+
+            <!-- Grand Location Container -->
+            <div class="sub-container grand-location-container">
+                <img src="./assets/location.png" alt="loc" width="80" height="80" loading="lazy">
+                <p>Grand Location Access</p>
+                <p>Allow Access to get Weather Information</p>
+                <button class="btn" data-grandAccess> Grand Access</button>
+            </div>
+
+            <!-- Search Weather Form --> 
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for City . . . " data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" alt="ser" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- Loading Screen Container -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" alt="load" width="150" height="150" loading="lazy">
+                <p class="sub-container">Loading . . . </p>
+            </div>
+
+            <!-- Show Weather Info -->
+            <div class="sub-container user-info-container">
+
+                <!-- city , name & flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon alt="country">
+                </div>
+
+                <!-- weather descriptiion -->
+                <p data-WeatherDesc></p>
+                <img data-WeatherIcon alt="icon" >
+                <p data-temp></p>  
+
+
+                <!-- 3 Card Parameter -->
+                <div class="parameter-container">
+
+                    <!-- Card 1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png" alt="wind">
+                        <p>WINDSPEED</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png" alt="hum">
+                        <p>HUMIDITY</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png" alt="cloud">
+                        <p>CLOUDS</p>
+                        <P data-cloudiness></P>
+                    </div>
+
+                    <!-- Card 4 -->
+
+                    <!-- <div class="NotFind" HandleErrorCity>
+                        <img src="./assets/not-found.png">
+                        <P>City Is Not Found</P>
+                        <p>Please Try Again Properly . . . </p>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+            
+        </div>
+
+
+    </div>
+
+
+    <script src="./Weather.js"></script>
+</body>
+</html>
